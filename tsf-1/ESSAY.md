@@ -54,11 +54,13 @@ I *thought* that software went from IDEA to PROCESS to REALITY.   Zooming in we 
    QA -> 
    Release Manager -> REALITY
 
-()[diagram-linear-vs-nonlinear.excalidraw]
+![](1.png)
 
 That is, the job more-or-less is like a baton, handed on to the next in line.  Obviously this is not true (jobs were handed back and forth) however this was my original mental model.
 
 In fact what happens is everyone talks to everyone - sometimes.  The Engineer clarifies a point with the QA who talks to the BA and the release manager coordinates with the Engineering Director.  
+
+![](4.png)
 
 ## Teams are fallable and inconsistent
 
@@ -80,9 +82,12 @@ What happens is some roles get together in a little council and decide to agree 
 
 This happens in micro-meetings with perhaps some established processes (set ticket FOO-123 status to "in test") - but it also happens adhoc in methods we have not properly captured.
 
+![](2.png)
+
 The progression of any work is as a result of consensus.   Where work proceeds with cosensus of 1 (That is, the engineer says: it works, trust me), is where there is high risk.
 
 Where there is NO consensus, escalation occurs. It is possible we will learn that some outcomes cannto be decided autonomously - the system will then escalate to the HUMAN in the loop.  This is not strictly a failure - rather an outcome we will learn from.   This escalation may inform higher quality role descripitons, yielding fewer escalations.
+
 
 ## Work is carried out by a Role
 
@@ -180,6 +185,9 @@ The first version this, tsf-1, will attempt to implement a reference factory and
 - a CLI to interact
 - a website to interface and view work
 - a fleet of workers 
+
+
+![](3.png)
 
 ----
 
