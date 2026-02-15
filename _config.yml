@@ -1,0 +1,5 @@
+title: "agentic software blogs"
+description: "index for all blogs "
+theme: minima
+markdown: kramdown
+permalink: pretty
