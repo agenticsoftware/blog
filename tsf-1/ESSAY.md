@@ -1,6 +1,7 @@
-# tsf ESSAY
 
 ## Introduction
+
+2026-02-15
 
 Can a system of agents replace the traditional SDLC? should it? - The Software Factory (tsf) is an approach to answer this question.
 
