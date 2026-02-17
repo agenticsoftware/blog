@@ -1,1 +1,1 @@
-- [tsf-1](tsf-1/ESSAY.md)
+- [tsf-1](tsf-1/index.md)
