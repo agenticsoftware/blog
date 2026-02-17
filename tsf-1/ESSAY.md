@@ -1,17 +1,19 @@
 ## Introduction
 
-2026-02-15/16
+2026-02
 
 Can a system of agents replace the traditional SDLC? should it? - The Software Factory (tsf) is an approach to answer this question.
 
-The GOAL is to automate and augment the current SDLC process where we expect to improve productivity. The desired outcomes are:
+The GOAL is to automate and augment the current SDLC process where we expect to improve productivity. 
+
+The desired outcomes are:
 
   - programmers will operate at a higher level of abstraction
   - the number of programmers in the loop can be reduced for the same or greater amounts of work
   - the number of agents in the loop is increased
   - the quality of the work either is maintained or improves
   - further understanding of agentic engineering practices
-  - data to understand represent cost-value in software engineering
+  - data to better understand cost-value in software engineering
 
 ## Key challenges
 
@@ -59,15 +61,13 @@ I *thought* that software went from an IDEA through some PROCESS to REALITY.   Z
 - Release Manager ->
 - **REALITY**
 
-![](1.png)
+![Idea](diagrams/01-linear-pipeline.svg)
 
 That is, the job more-or-less is like a baton, handed on to the next in line.  
 
-Obviously this is **not true** (jobs were handed back and forth) however this was my original mental model.
-
 In fact what happens is everyone talks to everyone - sometimes.  The Engineer clarifies a point with the QA who talks to the BA and the release manager coordinates with the Engineering Director.  And so on.
 
-![](4.png)
+![Reality](diagrams/02-nonlinear-reality.svg)
 
 ## Teams are fallible and inconsistent
 
@@ -77,24 +77,25 @@ The engineer has a bad day, writes a bug which slips through to release because 
 
 Four of the team members get together in an adhoc meeting to decide what to do about some ambiguity of design or some impediment that has been discovered, decide on an outcome and don't rewrite the specification.
 
-An automated system *should not* be inconsistent in the manner above.  The prior examples *should* be addressed through modelling.  When the modelling is insufficient, the system should call this out and stop, or do something useful about it.
+For the new system to obtain trust, it **cannot** be unpredictable with regards to the validity of the outcome.  
+
+The prior examples will be addressed through modelling of system processes.  When the modelling is insufficient, the system should call this out and stop, or do something useful about it.
 
 ## LLMs are fallible and inconsistent.
 
-An LLM will hallucinate and/or output poor quality however the purpose of a COUNCIL is to assess the outcome and decide on the next best step.  
+An LLM will hallucinate and/or output poor quality.  The purpose of a COUNCIL is to assess the outcome and decide on the next best step.  
 
 This means task outcomes that result in poor quality are both accepted as a risk and mitigated through the council themselves.
 
 In fact we are not attempting to change a foundational model here - hallucinations are actually baked into the system of LLMs.  Indeed we accept this as a risk and then mitigate it via the decomposition, council and consensus.
 
-
 ## Consensus in teams is what drives progression
 
 How does software get built to any reasonable quality? - what happens is some roles get together in a little council and decide to agree or disagree - the definition of the job, the outcome of work being successful or not.  
 
-This happens in micro-meetings with perhaps some established processes or ceremonies - (set ticket FOO-123 status to "in test") - but it also happens adhoc in methods we have not properly captured.
+![Consensus](diagrams/08-consensus.svg)
 
-![](2.png)
+This happens in micro-meetings with perhaps some established processes or ceremonies - (set ticket FOO-123 status to "in test") - but it also happens adhoc in methods we have not properly captured.
 
 The progression of any work is as a result of CONSENSUS.   Where work proceeds with consensus of 1 (That is, the engineer says: it works, trust me), is where there is high risk.
 
@@ -102,9 +103,11 @@ Where there is NO consensus, escalation occurs. It is possible we will learn tha
 
 ## Work is carried out by a Role
 
-All work (ticket, design) is carried out by a discretely named ROLE - for example a Business Analyst.   
+Work is carried out by a discretely named ROLE - for example a Business Analyst.   A role has motivation, skills and relationships.
 
-The outcome of that work is then received by other ROLEs with different motivations - those roles will implicitly or explicitly appraise the quality of work, using or rejecting it.
+![Role](diagrams/03-the-role.svg)
+
+The outcome of work is then received by other ROLEs with different motivations - those roles will implicitly or explicitly appraise the quality of work, using or rejecting it.
 
 This is as true for a written document as it is for a unit test or a video game.
 
@@ -113,6 +116,9 @@ This means any piece of work would have a history of effort and outcome for all 
 ## There is no implicit memory
 
 There can be no place for tribal knowledge in an automated system.  
+
+![Skills](diagrams/05-skills.svg)
+
 
 Memory in a company is "institutional" - stored in the employees.  The challenge is that the HUMAN currently IS the ROLE - meaning they are not differentiated effectively, so "tribal knowledge" remains in the head of a specific human.
 
@@ -128,43 +134,43 @@ SKILLs - reusable technology capabilities that a ROLE calls upon to achieve a gi
 
 STORY - the objective itself.  A task contains the objective itself, its history, which roles did-what to it.   The data model for a task then is significant as it will contain sections that are effectively a living document of change.
 
+![The Story](diagrams/04-the-story.svg)
+
 The theory is the state - the memory - is the aggregation of ROLES, SKILLS and a STORY.
 
 ## Work is a living document
 
 For any piece of work then, it will have lineage - the effort taken, by who and when, the outcome.  This state represents the "history of the story" and can be useful informing future decisions.
 
+![Living Document](diagrams/07-living-document.svg)
+
 Caution will be needed as there is no upperbound to the history of a given problem - so using contemporary LLMs we will need to address this with regards to the relevant context sizes.   My assumption is that as a story itself presents its own challenge, another task is then created to "prepare this story for the role" which may act as a summarisation agent.
 
 ## A council is required to move a piece of work
 
-As WORK is completed by a ROLE, the outcome will then be assessed by a COUNCIL.   This is effectively another role - a role "of" roles, which acts as the motivation to decide what is the appropriate next step.
+As WORK is completed by a ROLE, the outcome will then be assessed by a COUNCIL.   This is effectively another role - a "role of roles", which acts as the motivation to decide what is the appropriate next step.
 
-It is NOT that the work is DONE, it is more that the work of the ROLE is finished for now and the decision to progress the work in any direction is the result of the council decision.
+![Council](diagrams/06-the-council.svg)
+
+It is NOT that the work is DONE, it is more that the work of the prior ROLE is finished for now and the decision to progress the work in any direction is the result of the council decision.
 
 A story itself will be part of an EPIC, so there are hints in the story itself as to what the intent is.  Additionally, an initial WORKFLOW structure will be provided by the OPERATOR which will act as advice on the available roles and various acceptance criteria that must be met.
 
-This means that the outcome of a given piece of work by a given ROLE is just some claimed state - "I'm finished".  But really the proof and quality of work is decided by the recipient - the COUNCIL.
+This means that the outcome of a given piece of work by a given ROLE is just some claimed state - *"I am a Programmer and I have finished my work according to the specification and acceptance criteria"*.  But really the proof and quality of work is decided by the recipient - the COUNCIL.
 
-So really work looks like this
-
-ROLE1+WORK -> COMPLETED -> COUNCIL -> OK -> ROLE2+WORK
-
-ROLE1+WORK -> COMPLETED -> COUNCIL -> NOT OK -> ROLE3+WORK
-
-Until the COUNCIL decides the work is complete.   The other thing is a COUNCIL is an appropriate set of ROLES in any given moment - so it is not a fixed decision making process - different roles and motivations will apply.
+A COUNCIL is an appropriate set of ROLES in any given moment - so it is not a fixed decision making process - different roles and motivations will apply depending on the memory of the work at that point in time.
 
 ## LLMs are the critical dependency
 
 Critical to the whole endeavour then is use of large language models.  The decomposition of work into ROLES, SKILLS, TASKs and the nonlinearity of the work means I expect we will see in the first outcomes:
 
-- high token usage (back-and-forth)
+- high token usage (back-and-forth consensus seeking)
 - a ratio of consensus:code to be high:low (delivers trusted outcomes)
 - many roles and role compositions
 
 The introduction of evolutionary roles in a subsequent phase may then allow for novel role and skills descriptions however I think they are beyond the scope of our V1.
 
-The use of LLMs then ARE the whole decision making process.  This endeavour is about strictly controlling the entire context for any given prompt by modelling roles, skills, tasks.   
+The use of LLMs then ARE the whole decision making process.  This endeavour is about strictly controlling the entire context for any given prompt by modelling roles, skills, tasks.
 
 ## What is success?
 
@@ -187,7 +193,9 @@ We will model this adaptive system with:
 
 - a ticket tracking system
 - the history of the work
-- separate roles with their objectives
+- separate roles with distinct objectives
+- a council formation algorithm
+- a council consensus algorithm
 
 In V1, we won't address evolution but prepare for it.  Once we have built up a corpus of tasks and their outcomes, we will then be able to use this as the learning material to see if we can create new ROLE descriptions or SKILLs that will yield a better outcome.
 
@@ -195,16 +203,16 @@ In V1, we won't address evolution but prepare for it.  Once we have built up a c
 
 This document proposed an approach to automate SDLC. The challenges of Trust, Repeatability and Provability are addressed through the decomposition of ROLEs, TASKs and COUNCILs.
 
+![The Software Factory](diagrams/09-full-factory.svg)
+
 The first version, tsf-1, will attempt to implement a reference factory and stop as it arrives at evolutionary roles.   This means tsf1 will be
 
 - a ticket engine
 - tickets are living documents
 - a CLI to interact
 - a website to interface and view work
+- a first pass of council and consensus
 - a fleet of workers 
-
-
-![](3.png)
 
 ----
 

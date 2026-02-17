@@ -49,7 +49,7 @@ Software development is nonlinear. This is the first insight that shapes the fac
 
 ---
 
-## 3. Introducing: The Role
+## 3. Role
 
 All work is carried out by a discretely named ROLE - for example a Business Analyst.
 
@@ -65,7 +65,7 @@ The outcome of work by a Role is then received by other Roles with different mot
 
 ---
 
-## 4. Introducing: The Story
+## 4. Story
 
 A STORY is the objective itself. It contains the objective, its history, which roles did what to it. The data model is significant as it will contain sections that are effectively a living document of change.
 
@@ -77,7 +77,7 @@ For any piece of work, it will have lineage - the effort taken, by who and when,
 
 ---
 
-## 5. Introducing: Skills
+## 5. Skills
 
 SKILLs are reusable technology capabilities that a ROLE calls upon to achieve a given objective. A Business Analyst might use a "Requirements Elicitation" skill. An Engineer might use "Code Generation" or "Test Writing" skills.
 
@@ -89,7 +89,7 @@ The theory is the state - the memory - is the aggregation of ROLES, SKILLS and a
 
 ---
 
-## 6. Introducing: The Council
+## 6. Council
 
 As work is completed by a Role, the outcome will be assessed by a COUNCIL. This is effectively another role - a role "of" roles - which acts as the motivation to decide what is the appropriate next step.
 
@@ -134,7 +134,7 @@ Where there is NO consensus, escalation occurs. It is possible we will learn tha
 
 ---
 
-## 9. The Full Factory
+## 9. The Factory
 
 Putting it all together. An Operator bootstraps the system with Role definitions, Skill descriptions, and Workflow structures. Stories flow through Roles, gated by Councils, accumulating history, until consensus determines them complete.
 
