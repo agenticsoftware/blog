@@ -1,0 +1,5 @@
+title: "The AI Elevator"
+description: "Which floor are *you* on?"
+theme: minima
+markdown: kramdown
+permalink: pretty
